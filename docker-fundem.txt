@@ -1,4 +1,4 @@
-====================================  docker  ======================================
+=================================================  docker  ====================================================
 
 
 docker-deamon : also known az "DOCKERD", it's the main component of docker due to it uses. it's a background service which manages docker containers images networks etc. that listens for docker api requests and so far. whenever we run a command in cli docker firstly sends that to the dockerd then will process our order, tutorials : 
