@@ -1,0 +1,23 @@
+====================================  docker  ======================================
+
+
+docker-deamon : also known az "DOCKERD", it's the main component of docker due to it uses. it's a background service which manages docker containers images networks etc. that listens for docker api requests and so far. whenever we run a command in cli docker firstly sends that to the dockerd then will process our order, tutorials : 
+				1. client run a command in terminal	
+				2. docker cli sends a request to dockerd
+				3. dockerd checks if NGINX image is available locally or not
+					if yes : continue;
+					else : pull the image from docker hub 
+				4. dockerd creates and starts a container from the nginx image
+
+!!! something should be noted that we're not connecting to dockerd through protocols like tcp,udp, etc. if we do "sudo nano systemctl.docker" on Service section there is a ExecStart var, it contains a command which is "-H fd://" it actually stands for "-HOST FILE DESCRIPTOR://"
+we can also customize the dockerd, exp) if we wanna listen on tcp we just remove file descriptor and instead we use tcp://0.0.0.0:0 !!!!!
+
+
+
+The diff between VM and docker containers : 
+1. vms can have different os from the host but in containers host will share its os kernel with containers
+2. vms will have a full os kernel, it's dependencies and it's applications etc. but containers will only include dependencies and it's applications so the system will not overhead or else.
+
+
+docker-name : docker uses linux-name-spaces and cgroups
+
