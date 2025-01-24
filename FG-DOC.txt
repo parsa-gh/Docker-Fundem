@@ -8,7 +8,7 @@ set role : a role that interface will be able to use, like lan(internal network)
 
 VDOM : fortigate devices has 2 types : 1.single-vdom-mode 2.multi-vdom-mode /// in case you want to check that what kind of device you have, just type this command in cli : "config vdom" if your device recognized it, then you have a multi-vdom-mode device and if it doesn't, then you have a single-vdom-mode device like FG30E
 
-Admin profiles : by default we have 2 admin profiles : 1.super-admin 2.prof-admin (profile-administrator) ||| we use different profiles for assigning users to them / for example we have a admin-user which we don't want him to change some sort of things so you make a prof-admin with limited permissions and assign that profile to that user. 
+Admin profiles : by default we have 2 admin profiles : 1.super-admin(has full access kinda like root user, and CAN NOT BE CHANGED) 2.prof-admin (profile-administrator) ||| we use different profiles for assigning users to them / for example we have a admin-user which we don't want him to change some sort of things so you make a prof-admin with limited permissions and assign that profile to that user. 
 !!!! NOTE : admin profiles as it name shows, DOES NOT effect users that has created locally. !!!!
 
 Security fabric : it actually means fortiguard, fortianalayzer, fortiswitch, etc.
@@ -16,3 +16,34 @@ Security fabric : it actually means fortiguard, fortianalayzer, fortiswitch, etc
 FortiView : the home page of GUI after logging in, if on None -> user will see nothing on home-page
 
 Firewall : you can seperate that into "Policy-Address-Service-Schedule" 
+
+set admin-concurrent Enable/Disabe : allows/disallows differnet admin accounts to login into the fortigate at the same time
+
+set admin-port xxx : changes the HTTP protocol port | for changing HTTPS port we must use set admin-sport xxx. as same as ssh etc.
+
+set admin-scp : SCP (Secure Copy Protocol) is a safe and secure way to send && recieve files in FG over SSH.
+
+set admin-maintainer : a temporary account which is available ONLY with console cable and allows you to change admin-password if it has been set as Enable.
+
+config firewall policy : it allows you to config your policies through CLI.
+
+set learning-mode Enable/Disable : a mode which allows you to spcify a polify only for collecting logs, this policy will be listening for any packets that will be sent to and collect their logs to use in future, after that, that packet will be moved to another policy that matches.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
