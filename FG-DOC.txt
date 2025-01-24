@@ -1,4 +1,18 @@
 =============================== FG NSE-4 ============================
 
+show system interfaces : Shows configs that has been written for that interface (like lan1, wan, etc.)
 
-commands
+show system global : Shows the configs that effect entire FG device, like hostname, timezone, etc.
+
+set role : a role that interface will be able to use, like lan(internal network), wan(external network), undefined(doesn't have any role), DMZ(a network between internal and external network which hosts the external networks to keep the internal one as isolated as possible.)
+
+VDOM : fortigate devices has 2 types : 1.single-vdom-mode 2.multi-vdom-mode /// in case you want to check that what kind of device you have, just type this command in cli : "config vdom" if your device recognized it, then you have a multi-vdom-mode device and if it doesn't, then you have a single-vdom-mode device like FG30E
+
+Admin profiles : by default we have 2 admin profiles : 1.super-admin 2.prof-admin (profile-administrator) ||| we use different profiles for assigning users to them / for example we have a admin-user which we don't want him to change some sort of things so you make a prof-admin with limited permissions and assign that profile to that user. 
+!!!! NOTE : admin profiles as it name shows, DOES NOT effect users that has created locally. !!!!
+
+Security fabric : it actually means fortiguard, fortianalayzer, fortiswitch, etc.
+
+FortiView : the home page of GUI after logging in, if on None -> user will see nothing on home-page
+
+Firewall : you can seperate that into "Policy-Address-Service-Schedule" 
