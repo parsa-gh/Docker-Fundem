@@ -29,6 +29,11 @@ config firewall policy : it allows you to config your policies through CLI.
 
 set learning-mode Enable/Disable : a mode which allows you to spcify a polify only for collecting logs, this policy will be listening for any packets that will be sent to and collect their logs to use in future, after that, that packet will be moved to another policy that matches.
 
+Policy ID : an unchangeble id which packets will be checked one by one starting from the first one(the most important policy) to the last one (not as important as the first one was)
+
+Reverse shaper in traffic shaper : means download's speed.
+
+Captive portal : limiting access to external network with a identified credentials.
 
 
 
