@@ -35,6 +35,13 @@ Reverse shaper in traffic shaper : means download's speed.
 
 Captive portal : limiting access to external network with a identified credentials.
 
+Remote gateway address : the IP that you are connecting to (in VPNs)
+
+Default gateway address : Acts as the exit point for traffic leaving the local network.
+
+
+
+
 
 
 
