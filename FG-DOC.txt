@@ -39,6 +39,12 @@ Remote gateway address : the IP that you are connecting to (in VPNs)
 
 Default gateway address : Acts as the exit point for traffic leaving the local network.
 
+SSL/TLS inspection : device will decrypt packet that has sent to device, checks it and if it was fine, will re-crypt it and pass, if it's not, re-crypts and will send the packet back. it is configable with "config firewall ssl-ssh-profile". if u don't want ur device to do the things that mentiond above, then "set ssl-exemp logging", it will pass the packet without checking its content. to save a log of bad files u gotta do "set ssl-anamoly-log enable". after all, u have to assign this to the policy which u wanted by "config firewall policy" then add "set ssl-ssh-profile <ur defined name>" 
+!!!! NOTE : make sure the service is on HTTPS/443. !!!!!
+
+
+
+
 
 
 
