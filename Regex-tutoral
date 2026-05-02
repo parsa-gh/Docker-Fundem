@@ -1,0 +1,11 @@
+------------------------------------- RegEx ------------------------------------
+
+1) . = any char like a,b,...,z or any digit 1,2,...,9
+2) ^ = the very beggining of a string like :  ^f means any string that starts with char "f"
+3) $ = the very last of a string like : ^f z$ means any string that starts with f and ends with z
+4) \d = or (digit\) means any digit like 1,2,..,9
+5) \w = or (word\) means any word or characters
+6) \s = or (space\)
+7) * = means we do not care what's afterwards of sth, we select all like : parsa* means anything that starts with parsa and doesn't matter what have in the continous
+and obviously, parsa itself is included ( zero and above )
+8) + = exactly the same as rule No.7 but parsa itself is not included. (one and above)
